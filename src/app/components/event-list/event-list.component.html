@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor='let event of eventsService.events'>
+    <app-event [event]='event' (click)='click(event)'></app-event>
+  </li>
+</ul>

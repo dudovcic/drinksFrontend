@@ -1,0 +1,7 @@
+<input type="text" [(ngModel)]='searchTerm' (keyup)='onChange()'>
+<agm-map [zoom]='zoom' [latitude]="latitude" [longitude]="longitude">
+  <agm-marker-cluster [imagePath]="'https://googlemaps.github.io/js-marker-clusterer/images/m'">
+    <agm-marker *ngFor='let event of eventsService.events' [label]='event.title' [latitude]="event.location.latitude" [longitude]="event.location.longitude"></agm-marker>
+  </agm-marker-cluster>
+</agm-map>
+<app-event-list (clickEvent)='setLocation($event)'><app-event-list>
