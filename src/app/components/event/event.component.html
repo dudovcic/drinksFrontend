@@ -1,1 +1,52 @@
-{{ event | json }}
+{{event | json}}
+<div id='event-container'>
+    <div class="creator">
+        <img src="{{event.creator.avatarUrl}}" alt="">
+        <span>{{event.creator.name}}</span>
+    </div>
+    <div class="main-info">
+        <label for="event-id">{{event.id}}</label>
+        <label for="event-title">{{event.title}}</label>
+        <label for="createdAt">{{event.time}}</label>
+    </div>
+    <div class="guests">
+        <ul class='guest-list'>
+            <li *ngFor="let guest of event.guests">
+                <img src="{{guest.avatarUrl}}" alt="">
+                <span>{{guest.name}}</span>
+            </li>
+        </ul>
+    </div>
+    <div class="comments">
+        <div *ngFor="let comment of event.comments">
+            <img src="{{comment.user.avatarUrl}}" alt="">
+            <span>{{comment.user.name}}</span>
+            <span>Commented at: {{comment.timestamp}}</span>
+            <span>{{comment.message}}</span>
+        </div>
+    </div>
+</div>
+
+<div id="event-container">
+    <div class="main-info">
+        <img src="assets/img/{{event.type.toLowerCase()}}-icon.png" alt="{{event.type}}">
+        <p>{{event.title}}</p>
+        <p>{{event.creator.name}}</p>
+        <img src="{{event.creator.avatarUrl}}" alt="creator avatar">
+    </div>
+    <div class="guests">
+        <label for="guests">Guests</label>
+        <div *ngFor='let guest of event.guests' class="guest">
+            <img src="{{guest.avatarUrl}}" alt="">
+            <span>{{guest.name}}</span>
+        </div>
+    </div>
+</div>
+<div *ngIf='openComments' class="comments">
+    <div *ngFor='let comment of event.comments' class="comment">
+        <img src="{{comment.user.avatarUrl}}" alt="">
+        <span>{{comment.user.name}}</span>
+        <span>Commented at: {{comment.timestamp}}</span>
+        <span>{{comment.message}}</span>
+    </div>
+</div>

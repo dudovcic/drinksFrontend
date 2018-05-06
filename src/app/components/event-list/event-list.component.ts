@@ -14,6 +14,7 @@ export class EventListComponent {
   
   click(event: Event) {
     this.clickEvent.emit(event.location)
+    scroll(0, 0)
   }
 
 }

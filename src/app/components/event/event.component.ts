@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class EventComponent {
   @Input() event;
+  openComments: boolean = false;
 }

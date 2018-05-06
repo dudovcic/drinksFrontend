@@ -1,0 +1,26 @@
+.guests, .mainInfo, .creator {
+    display: flex;
+}
+#event-container {
+    width: 80%;
+    padding: 40px;
+    background-color: rgba(229,203,144, 0.2);
+    border-radius: 90px;
+}
+img {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+}
+
+li {
+    list-style: none;
+}
+
+.main-info label {
+    font-size: 1.3em;
+}
+
+#event-container {
+    font-size: 26px;
+}
