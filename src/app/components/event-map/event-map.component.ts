@@ -19,7 +19,6 @@ export class EventMapComponent implements OnInit {
   }
 
   setLocation(location: EventLocation) {
-    console.log(location);
     this.latitude = location.latitude;
     this.longitude = location.longitude;
     this.zoom = 20;

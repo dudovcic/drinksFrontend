@@ -14,7 +14,7 @@ export class EventListComponent {
   
   click(event: Event) {
     this.clickEvent.emit(event.location)
-    scroll(0, 0)
+    //scroll(0, 0) - scroll to map when component is clicked, but it irritates UX a bit
   }
 
 }
