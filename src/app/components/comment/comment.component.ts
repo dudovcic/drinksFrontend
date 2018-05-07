@@ -17,7 +17,6 @@ import 'rxjs/add/operator/toPromise';
 export class CommentComponent implements OnInit {
   @Input() comments: EventComment[];
   constructor() {
-  	console.log("Coments", this.comments);
   }
 
   ngOnInit() {
