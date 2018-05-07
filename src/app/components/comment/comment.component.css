@@ -1,0 +1,23 @@
+.comment {
+	background: white;
+	margin-bottom: 10px;
+	padding: 10px;
+	border-radius: 3px;
+}
+
+.avatar {
+    width: 50px;
+	border-radius: 100%;
+	display: inline-block;
+}
+
+.details {
+	display: inline-block;
+	margin-left: 10px;
+    vertical-align: top;
+    line-height: 25px;
+}
+
+.details .time {
+	color: #aaa;
+}

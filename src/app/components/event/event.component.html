@@ -1,19 +1,32 @@
-<div id="event-container">
+<div class="event-container">
     <div class="main-info">
-        <img src="assets/img/{{event.type.toLowerCase()}}-icon.png" alt="{{event.type}}">
-        <p>{{event.title}}</p>
-        <p>{{event.time}}</p>
-        <p>{{event.location.name}}</p>
-        <p>{{event.creator.name}}</p>
-        <img src="{{event.creator.avatarUrl}}" alt="creator avatar">
-    </div>
-    <div class="guests">
-        <label for="guests">Guests</label>
-        <div *ngFor='let guest of event.guests' class="guest">
-            <img src="{{guest.avatarUrl}}" alt="">
-            <span>{{guest.name}}</span>
+        <div class="icon">
+            <img src="assets/img/{{event.type.toLowerCase()}}-icon.png" alt="{{event.type}}">
+        </div>
+        <div class="details">
+            <h3>{{event.title}}</h3>
+            <p>{{event.time | date: 'dd.MM.yyyy'}}</p>
+            <p>{{event.location.name}}</p>
         </div>
     </div>
-    <button (click)='toggleComments()'>Comments</button>
+    <div class="creator">
+        <div class="label">Creator</div>
+        <div class="guests-container">
+            <div class="guest">
+                <img class="avatar" src="{{event.creator.avatarUrl}}" alt="creator avatar">
+                <div class="name">{{event.creator.name}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="guests">
+        <div class="label">Guests</div>
+        <div class="guests-container">
+            <div *ngFor='let guest of event.guests' class="guest">
+                <img class="avatar" src="{{guest.avatarUrl}}" alt="">
+                <div class="name">{{guest.name}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="comments-toggle" (click)='toggleComments()'>{{event.comments.length}} comment<span *ngIf="event.comments.length != 1">s</span> (hide/show)</div>
+    <app-comment *ngIf='openComments' [comments]='event.comments' class="comments"></app-comment>
 </div>
-<app-comment *ngIf='openComments' [comments]='event.comments' class="comments"></app-comment>

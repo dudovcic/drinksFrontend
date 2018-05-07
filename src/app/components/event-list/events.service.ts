@@ -4,7 +4,7 @@ import { Event } from '../../interfaces/event';
 
 @Injectable()
 export class EventsService {
-  ROOT_URL = 'http://localhost:3000';
+  ROOT_URL = 'https://mock-api.drinks.test.siliconrhino.io';
   events: Event[];
   constructor(private http: HttpClient) {
     this.getEvents();
@@ -16,8 +16,10 @@ export class EventsService {
 
   getEvents(search?: string) {
     this.fetchEvents(search)
-      .subscribe(events => {this.events = <Event[]>events; this.setTimes()}) // would do map here, but Typescript seems not to like it
+      .subscribe(events => {
+      this.events = <Event[]>events;
       this.setTimes()
+      }) // would do map here, but Typescript seems not to like it
   }
   setTimes() {
     if (!this.events) return;

@@ -1,5 +1,20 @@
 agm-map {
-    height: 500px;
-    width: 100%;
-  }
-  
+  height: 100vh;
+  width: 100%;
+}
+
+.events {
+  width: 400px;
+  float: left;
+}
+
+.map {
+  width: calc(100% - 400px);
+  float: right;
+}
+
+input {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 10px;
+}

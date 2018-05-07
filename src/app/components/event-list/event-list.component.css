@@ -3,3 +3,23 @@ li {
     margin: 10px;
 }
 
+.search-container {
+    padding: 15px;
+    height: 60px;
+    box-sizing: border-box;
+}
+
+.events-container {
+    padding: 0 15px;
+    height: calc(100vh - 60px);
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.search {
+    width: 100%;
+    outline: none;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+

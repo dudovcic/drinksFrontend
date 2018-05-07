@@ -1,7 +1,11 @@
 <div *ngFor='let comment of comments' class="comment">
-    <img src="{{comment.user.avatarUrl}}" alt="">
-    <span>{{comment.user.name}}</span>
-    <span>Commented at: {{comment.timestamp}}</span>
-    <span>{{comment.message}}</span>
+    <img class="avatar" src="{{comment.user.avatarUrl}}" alt="">
+    <div class='details'>
+    	<div class="name">{{comment.user.name}}</div>
+    	<div class="time">{{humanReadableTime(comment.timestamp)}}</div>
+    </div>
+    <div class="message">
+        <p>{{comment.message}}</p>
+    </div>
 </div>
 <p *ngIf='!comments.length'>No comments on this event!</p>

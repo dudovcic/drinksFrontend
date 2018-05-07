@@ -1,5 +1,6 @@
-<ul>
-  <li *ngFor='let event of eventsService.events'>
-    <app-event [event]='event' (click)='click(event)'></app-event>
-  </li>
-</ul>
+<div class="search-container">
+    <input class="search" placeholder='Search for event...' type="text" [(ngModel)]='searchTerm' (keyup)='onChange()'>
+</div>
+<div class="events-container">
+  <app-event *ngFor='let event of eventsService.events' [event]='event' (click)='click(event)'></app-event>
+</div>
