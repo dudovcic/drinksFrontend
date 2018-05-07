@@ -10,7 +10,9 @@ img {
 }
 
 .details p:last-child {
-	padding-top: 40px;
+	padding-top: 20px;
+	text-align: center;
+	font-style: italic;
 }
 
 .comment > img, .comment > div {

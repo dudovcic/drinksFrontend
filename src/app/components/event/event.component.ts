@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-event',
@@ -15,6 +16,6 @@ export class EventComponent implements OnInit {
   }
 
   ngOnInit() {
-  	this.event.time = new Date(this.event.time).toString(); 
+  	this.event.time = moment(this.event.time).format("LLLL"); 
   }
 }

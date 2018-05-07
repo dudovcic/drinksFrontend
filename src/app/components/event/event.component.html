@@ -11,9 +11,15 @@
         <label for="guests">Guests</label>
         <div *ngFor='let guest of event.guests' class="guest">
             <img src="{{guest.avatarUrl}}" alt="">
-            <span>{{guest.name}}</span>
+            <p>{{guest.name}}</p>
         </div>
     </div>
-    <button (click)='toggleComments()'>Comments</button>
+    <div class='commentbtn'>
+   		<button (click)='toggleComments()'>
+   			<img src="assets/img/comment.png">
+   		</button>
+
+    </div>
+
 </div>
 <app-comment *ngIf='openComments' [comments]='event.comments' class="comments"></app-comment>
