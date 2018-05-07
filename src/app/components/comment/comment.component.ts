@@ -8,9 +8,12 @@ import { EventComment } from '../../interfaces/event-comment';
 })
 export class CommentComponent implements OnInit {
   @Input() comments: EventComment;
-  constructor() { }
+  constructor() {
+  	console.log("Coments", this.comments);
+  }
 
   ngOnInit() {
+  	console.log(this.comments)
   }
 
 }

@@ -3,3 +3,8 @@ agm-map {
     width: 100%;
   }
   
+ input {
+ 	margin: 10px;
+ 	padding: 5px;
+ 	border-radius: 10px;
+ }

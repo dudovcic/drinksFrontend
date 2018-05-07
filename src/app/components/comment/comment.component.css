@@ -1,0 +1,22 @@
+img {
+	border-radius: 50%;
+}
+
+.details p {
+	display: block;
+	text-align: left;
+	padding: 0;
+	margin: 0;
+}
+
+.details p:last-child {
+	padding-top: 40px;
+}
+
+.comment > img, .comment > div {
+	display: inline-block;
+}
+
+.details p:last-child {
+	display: block;
+}

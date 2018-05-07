@@ -3,9 +3,10 @@
 }
 #event-container {
     width: 80%;
-    padding: 40px;
+    padding: 10px;
     background-color: rgba(229,203,144, 0.2);
     border-radius: 90px;
+    font-size: 26px;
 }
 img {
     width: 40px;
@@ -21,10 +22,6 @@ li {
     font-size: 1.3em;
 }
 
-#event-container {
-    font-size: 26px;
-}
-
 p {
     margin: 0;
 }
@@ -33,4 +30,13 @@ label {
 }
 .guest {
     display: block;
+}
+
+button {
+	background-color: #bb6b62;
+	margin: 10px;
+	color: white;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
 }
