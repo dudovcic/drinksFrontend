@@ -8,8 +8,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 First get back-end node webserver running ...
 ```
 git clone https://github.com/dudovcic/drinksBackend
-npm i
-node app
 ```
 ## Step 2
 

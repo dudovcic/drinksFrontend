@@ -17,15 +17,10 @@ export class EventsService {
   getEvents(search?: string) {
     this.fetchEvents(search)
       .subscribe(events => {
-      this.events = <Event[]>events;
-      this.setTimes()
-      }) // would do map here, but Typescript seems not to like it
-  }
-  setTimes() {
-    if (!this.events) return;
-    this.events = this.events.map(event => {
-      event.time = ''+new Date(event.time);
-      return event;
-    })
+      this.events = (<Event[]>events).map(event => {
+        event.time = ''+new Date(event.time);
+        return event;
+      });
+      })
   }
 }

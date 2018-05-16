@@ -31,7 +31,7 @@ import { CommentComponent } from './components/comment/comment.component';
     AgmJsMarkerClustererModule,
     FormsModule
   ],
-  providers: [ EventsService ],
+  providers: [EventsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
