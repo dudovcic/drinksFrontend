@@ -21,6 +21,6 @@ export class EventsService {
         event.time = ''+new Date(event.time);
         return event;
       });
-      }) // would do map here, but Typescript seems not to like it
+      })
   }
 }
