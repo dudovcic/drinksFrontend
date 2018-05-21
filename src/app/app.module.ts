@@ -13,6 +13,7 @@ import { EventComponent } from './components/event/event.component';
 import { EventsService } from './components/event-list/events.service';
 import { EventMapComponent } from './components/event-map/event-map.component';
 import { CommentComponent } from './components/comment/comment.component';
+import { HumanTimePipe } from './components/comment/human-time.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CommentComponent } from './components/comment/comment.component';
     EventListComponent,
     EventComponent,
     EventMapComponent,
-    CommentComponent
+    CommentComponent,
+    HumanTimePipe
   ],
   imports: [
     BrowserModule,

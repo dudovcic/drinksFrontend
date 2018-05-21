@@ -8,6 +8,7 @@ import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/toPromise';
+import { Pipe, PipeTransform } from '@angular/core';
 
 @Component({
   selector: 'app-comment',
@@ -25,9 +26,4 @@ export class CommentComponent implements OnInit {
   		return comment;
   	})
   }
-
-  humanReadableTime(time: Date) {
-    return moment(time).fromNow();
-  }
-
 }

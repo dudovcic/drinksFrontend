@@ -2,7 +2,7 @@
     <img class="avatar" src="{{comment.user.avatarUrl}}" alt="">
     <div class='details'>
     	<div class="name">{{comment.user.name}}</div>
-    	<div class="time">{{humanReadableTime(comment.timestamp)}}</div>
+    	<div class="time">{{ comment.timestamp | humanTime }}</div>
     </div>
     <div class="message">
         <p>{{comment.message}}</p>

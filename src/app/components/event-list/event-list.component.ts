@@ -1,3 +1,4 @@
+
 import { Component, Output, OnInit, EventEmitter } from '@angular/core';
 import { EventsService } from './events.service';
 import { Event } from '../../interfaces/event';
@@ -9,11 +10,22 @@ import { Event } from '../../interfaces/event';
 })
 export class EventListComponent {
 
+  searchTimeout: any;
+  searchTerm: string = '';
+
   @Output() clickEvent = new EventEmitter();
+
   constructor( public eventsService: EventsService) {}
   
   click(event: Event) {
     this.clickEvent.emit(event.location)
   }
 
+  onChange() {
+    clearTimeout(this.searchTimeout);
+    this.searchTimeout =
+      setTimeout(() => {
+        this.eventsService.getEvents(this.searchTerm);
+      }, 500)
+  }
 }

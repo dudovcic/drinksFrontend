@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Event } from '../../interfaces/event';
+import {Observable} from 'rxjs/Observable';
 
 @Injectable()
 export class EventsService {
@@ -10,17 +11,14 @@ export class EventsService {
     this.getEvents();
   }
 
-  fetchEvents(search: string = '') {
+  fetchEvents(search: string = ''): Observable<Object> {
     return this.http.get(this.ROOT_URL + '/events?search=' + search)
   }
 
-  getEvents(search?: string) {
+  getEvents(search?: string): void {
     this.fetchEvents(search)
       .subscribe(events => {
-      this.events = (<Event[]>events).map(event => {
-        event.time = ''+new Date(event.time);
-        return event;
-      });
+        this.events = <Event[]>events;
       })
   }
 }
