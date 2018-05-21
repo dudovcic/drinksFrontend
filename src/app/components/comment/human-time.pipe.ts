@@ -7,7 +7,7 @@ import * as moment from 'moment';
     pure: true
 })
 export class HumanTimePipe implements PipeTransform {
-    transform(time: any) {
-        return moment(time).format("LLL");
+    transform(time: any, format: string = "LLL") {
+        return moment(time).format(format);
     }
 }
