@@ -1,8 +1,6 @@
 # DrinksFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.3.
-# Running app in development mode
-
+Angular app using Angular-Maps (AGM ) API.
 ## Step 1
 
 First get back-end node webserver running ...
